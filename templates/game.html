@@ -1,11 +1,13 @@
 <!doctype html>
 <html>
 <head>
+
   <title>Game</title>
+  <link rel="stylesheet" href="/static/madlibs.css">
 </head>
 <body>
     
-    Here we go!<br><br>
+    <h2>Here we go!</h2><br><br>
     <form action='/madlib'>
         Name:
             <input type="text" name="name"><br>
@@ -14,6 +16,7 @@
             <option value="cat">cat</option>
             <option value="sun">sun</option>
             <option value="paper">paper</option>
+            <option value="computer">computer</option>
         </select><br>
          Pick an adjective.
         <select name="adjective">
@@ -27,7 +30,26 @@
             <option value="black">Black</option>
             <option value="green">Green</option>
             <option value="pink">Pink</option>
+            <option value="blue">Blue</option>
+            <option value="gray">Gray</option>
         </select><br>
+        
+
+        What's the weather?
+        <input type="radio" name="weather" value="sunny">Sunny
+        <input type="radio" name="weather" value="rainy">Rainy
+        <input type="radio" name="weather" value="windy">Windy
+        <input type="radio" name="weather" value="foggy">Foggy
+        <input type="radio" name="weather" value="snowy">Snowy
+        <br>
+
+        Pick a verb.
+        <input type="checkbox" name="verb" value="dancing">Dancing
+        <input type="checkbox" name="verb" value="sleeping">Sleeping
+        <input type="checkbox" name="verb" value="swimming">Swimming
+
+        <br><br>
+
         <input type="submit">
 
     </form>

@@ -58,18 +58,29 @@ def show_madlib_form():
 @app.route('/madlib')
 def show_madlib():
 
+    # raise Exception("error")
+
     user_name = request.args.get("name")
     user_color = request.args.get("color")
     user_noun = request.args.get("noun")
     user_adjective = request.args.get("adjective")
+    user_weather = request.args.get("weather")
+    user_verb =request.args.get("verb")
 
-    return render_template("madlib.html",
+    # getlist
+
+    madlibs = ["madlib.html", "madlib2.html"]
+
+    return render_template(choice(madlibs),
                             name=user_name,
                             color=user_color,
                             noun=user_noun,
-                            adjective=user_adjective
+                            adjective=user_adjective,
+                            weather=user_weather,
+                            verb =user_verb
                             )
 
+    
 
 
 if __name__ == '__main__':
